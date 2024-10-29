@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berichtsheft</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .calendar {
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 0 10px;
+        }
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+            justify-items: center;
+        }
+        .day {
+            padding: 10px;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        .selected-day {
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+        }
+        .day:hover {
+            background-color: #f0f0f0;
+            border-radius: 50%;
+        }
+        .selected-day:hover {
+            background-color: #0056b3;
+        }
+        .scrollable-container {
+            height: 500px;
+            overflow-y: auto;
+            border-right: 1px solid #ddd;
+            padding-right: 15px;
+        }
+        .day-container {
+            position: relative;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            background-color: #f9f9f9;
+            margin-bottom: 5px;
+        }
+        .day-container h5 {
+            margin-bottom: 5px;
+        }
+        .edit-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #007bff;
+        }
+        @media (max-width: 800px) {
+            .calendar {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="btn btn-link text-dark"><i class="fas fa-bell"></i></button>
+            <span class="navbar-brand mx-auto">Berichtsheft</span>
+            <button class="btn btn-link text-dark"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 order-2 order-md-1 scrollable-container">
+                <div class="day-container">
+                    <h5>29. Oktober</h5>
+                    <h6>Einsatzstelle, 7h</h6>
+                    <p>Beschreibung für den 29. Oktober.</p>
+                    <button class="edit-button"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+                <div class="day-container">
+                    <h5>30. Oktober</h5>
+                    <h6>Einsatzstelle, 7h</h6>
+                    <p>Beschreibung für den 30. Oktober.</p>
+                    <button class="edit-button"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+                <div class="day-container">
+                    <h5>31. Oktober</h5>
+                    <h6>Einsatzstelle, 7h</h6>
+                    <p>Beschreibung für den 31. Oktober.</p>
+                    <button class="edit-button"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+            <div class="col-md-6 order-1 order-md-2 mb-4">
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <button class="btn btn-outline-primary">&lt;</button>
+                        <h4>Oktober 2023</h4>
+                        <button class="btn btn-outline-primary">&gt;</button>
+                    </div>
+                    <div class="calendar-days">
+                        <button class="day">Mo</button>
+                        <button class="day">Di</button>
+                        <button class="day">Mi</button>
+                        <button class="day">Do</button>
+                        <button class="day">Fr</button>
+                        <button class="day">Sa</button>
+                        <button class="day">So</button>
+                        <!-- First week -->
+                        <button class="day"></button>
+                        <button class="day"></button>
+                        <button class="day"></button>
+                        <button class="day"></button>
+                        <button class="day">1</button>
+                        <button class="day">2</button>
+                        <button class="day">3</button>
+                        <!-- Second week -->
+                        <button class="day">4</button>
+                        <button class="day">5</button>
+                        <button class="day">6</button>
+                        <button class="day">7</button>
+                        <button class="day">8</button>
+                        <button class="day">9</button>
+                        <button class="day">10</button>
+                        <!-- Third week -->
+                        <button class="day">11</button>
+                        <button class="day">12</button>
+                        <button class="day">13</button>
+                        <button class="day">14</button>
+                        <button class="day">15</button>
+                        <button class="day">16</button>
+                        <button class="day">17</button>
+                        <!-- Fourth week -->
+                        <button class="day">18</button>
+                        <button class="day">19</button>
+                        <button class="day">20</button>
+                        <button class="day">21</button>
+                        <button class="day">22</button>
+                        <button class="day">23</button>
+                        <button class="day">24</button>
+                        <!-- Fifth week -->
+                        <button class="day">25</button>
+                        <button class="day">26</button>
+                        <button class="day">27</button>
+                        <button class="day">28</button>
+                        <button class="day selected-day">29</button>
+                        <button class="day">30</button>
+                        <button class="day">31</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
