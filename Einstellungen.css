@@ -1,0 +1,35 @@
+.menu {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            margin-right: 10px;
+        }
+        
+        .user-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .username {
+            margin-bottom: 5px;
+        }
+        
+        .email {
+            margin-top: 0;
+        }
+        
+        .menu-options ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .menu-options li {
+            margin-bottom: 10px;
+            list-style-type: none;
+        }
+        
+        .logout-option {
+            margin-top: 10px;
+        }
