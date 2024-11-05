@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profilseite</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .profile-container {
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .profile-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #888;
+            font-size: 60px;
+        }
+        .profile-details p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="btn btn-link text-dark"><i class="fas fa-bell"></i></button>
+            <a class="navbar-brand mx-auto" href="#"><i class="fas fa-user"></i> Profil</a>
+            <button class="btn btn-link text-dark"><i class="fas fa-sign-out-alt"></i></button>
+        </div>
+    </nav>
+    
+    <div class="profile-container">
+        <h2>Profil</h2>
+        <div class="profile-details">
+            <div class="profile-picture">
+                <i class="fas fa-user"></i>
+            </div>
+            <p><strong>Username:</strong> JohnDoe</p>
+            <p><strong>Geburtsdatum:</strong> 01.01.1990</p>
+            <p><strong>Ausbilder:</strong> Max Mustermann</p>
+        </div>
+    </div>
+</body>
+</html>
